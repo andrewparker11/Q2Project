@@ -36,6 +36,10 @@ def moveDown(event):
     
 #runs the game
 if __name__ == '__main__':
+   
+    data = {}
+    
+    
     white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
     red = Color(0xFF0000,1) 
@@ -49,11 +53,11 @@ if __name__ == '__main__':
     brown = Color(0x8B4513,1)
  
     
-    jungleBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
+    BackBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
     startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black)
 
     
-    Sprite(jungleBox)
+    Sprite(BackBox)
     painter = Sprite(startBox)
     
     
@@ -61,3 +65,4 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','left arrow',moveLeft)
     App().listenKeyEvent('keydown','up arrow',moveUp)
     App().listenKeyEvent('keydown','down arrow',moveDown)
+    App().run()
