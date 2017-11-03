@@ -19,25 +19,24 @@ def moveRight(event):
 def moveLeft(event):
     if painter.x > 0:
         painter.x -= CELL_SIZE
-    
+        Sprite(startBox)
     
 #moves painter up    
 def moveUp(event):
     if painter.y > 0:
         painter.y -= CELL_SIZE
-
+        Sprite(startBox)
     
 #moves painter down
 def moveDown(event):
     if painter.y < (ROWS-1)*CELL_SIZE:
         painter.y += CELL_SIZE
-        
+        Sprite(startBox)
 
     
 #runs the game
 if __name__ == '__main__':
    
-    
     
     white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
