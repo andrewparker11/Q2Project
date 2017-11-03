@@ -13,7 +13,7 @@ CELL_SIZE = 20
 def moveRight(event):
     if painter.x < (COLS-1)*CELL_SIZE:
         painter.x += CELL_SIZE
-        Sprite(startBox,(x,y))
+        Sprite(startBox)
     
 #moves painter left
 def moveLeft(event):
