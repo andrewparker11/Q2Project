@@ -9,28 +9,28 @@ COLS = 50
 CELL_SIZE = 20
 
 
-#moves monkey right
+#moves painter right
 def moveRight(event):
-    if monkey.x < (COLS-1)*CELL_SIZE:
-        monkey.x += CELL_SIZE
+    if painter.x < (COLS-1)*CELL_SIZE:
+        painter.x += CELL_SIZE
     
     
-#moves monkey left
+#moves painter left
 def moveLeft(event):
-    if monkey.x > 0:
-        monkey.x -= CELL_SIZE
+    if painter.x > 0:
+        painter.x -= CELL_SIZE
     
     
-#moves monkey up    
+#moves painter up    
 def moveUp(event):
-    if monkey.y > 0:
-        monkey.y -= CELL_SIZE
+    if painter.y > 0:
+        painter.y -= CELL_SIZE
 
     
-#moves monkey down
+#moves painter down
 def moveDown(event):
-    if monkey.y < (ROWS-1)*CELL_SIZE:
-        monkey.y += CELL_SIZE
+    if painter.y < (ROWS-1)*CELL_SIZE:
+        painter.y += CELL_SIZE
         
 
     
@@ -50,11 +50,11 @@ if __name__ == '__main__':
  
     
     jungleBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
-    monkeyBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,brown),brown)
+    startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black)
 
     
     Sprite(jungleBox)
-    monkey = Sprite(monkeyBox)
+    painter = Sprite(startBox)
     
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
