@@ -19,7 +19,6 @@ def moveRight(event):
 def moveLeft(event):
     if painter.x > 0:
         painter.x -= CELL_SIZE
-        sprite(
     
     
 #moves painter up    
@@ -34,9 +33,6 @@ def moveDown(event):
         painter.y += CELL_SIZE
         
 
-def trace(event):
-    if painter.y > 0 and painter.x > 0:
-        return(RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black))
     
 #runs the game
 if __name__ == '__main__':
