@@ -56,8 +56,8 @@ if __name__ == '__main__':
     startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black)
 
     
-    Sprite(BackBox,)
-    painter = Sprite(startBox)
+    Sprite(startBox,(300,100))
+    painter = Sprite(startBox, (300,100))
     
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
