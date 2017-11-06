@@ -35,21 +35,16 @@ def moveDown(event):
 
 
 #drawOff
-def drawOff(event):
-    if data[drawOnOff] = True:
-        data[drawOnOff] = False
+def drawOnOff(event):
+    if True:
+        drawOnOff = False
   
-"""    
-#drawOff 
-def colorChange(event):
 
-"""
 
 #runs the game
 if __name__ == '__main__':
-   
-data = {}
-data[drawOnOff] = True
+    data = {}
+    data[drawOnOff] = True
 
     
     white = Color(0xFFFFFF,1)
