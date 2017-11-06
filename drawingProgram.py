@@ -37,7 +37,7 @@ def moveDown(event):
 #drawOff
 def drawOnOff(event):
     if data["drawOnOff"] == True:
-        data["drawOnOff"] == False
+        data["drawOnOff"] = False
   
 
 
