@@ -36,12 +36,8 @@ def moveDown(event):
 
 #drawOff
 def drawOff(event):
-    key = "d" 
-    if key == d:
-        startBox
-        Sprite(startBox,(painter.x,painter.y))
-        painter.y += CELL_SIZE
-        startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,white),white)
+    if data[drawOnOff] = True:
+        data[drawOnOff] = False
   
 """    
 #drawOff 
@@ -52,6 +48,9 @@ def colorChange(event):
 #runs the game
 if __name__ == '__main__':
    
+data = {}
+data[drawOnOff] = True
+
     
     white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
@@ -78,5 +77,5 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','left arrow',moveLeft)
     App().listenKeyEvent('keydown','up arrow',moveUp)
     App().listenKeyEvent('keydown','down arrow',moveDown)
-    """App().listenKeyEvent('keydown','d key',drawOff)"""
+    App().listenKeyEvent('keydown','d',drawOnOff)
     App().run()
