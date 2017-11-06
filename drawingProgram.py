@@ -33,7 +33,15 @@ def moveDown(event):
         painter.y += CELL_SIZE
         Sprite(startBox,(painter.x,painter.y))
 
+"""
+#drawOff
+def drawOff(event):
     
+#drawOff 
+def colorChange(event):
+
+"""
+
 #runs the game
 if __name__ == '__main__':
    
@@ -63,4 +71,5 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','left arrow',moveLeft)
     App().listenKeyEvent('keydown','up arrow',moveUp)
     App().listenKeyEvent('keydown','down arrow',moveDown)
+    """App().listenKeyEvent('keydown','d key',drawOff)"""
     App().run()
