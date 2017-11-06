@@ -33,10 +33,17 @@ def moveDown(event):
         painter.y += CELL_SIZE
         Sprite(startBox,(painter.x,painter.y))
 
-"""
+
 #drawOff
 def drawOff(event):
-    
+    key = "d" 
+    if key == d:
+        startBox
+        Sprite(startBox,(painter.x,painter.y))
+        painter.y += CELL_SIZE
+        startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,white),white)
+  
+"""    
 #drawOff 
 def colorChange(event):
 
