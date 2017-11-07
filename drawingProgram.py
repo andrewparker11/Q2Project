@@ -48,22 +48,15 @@ def drawOnOff(event):
         data["drawOnOff"] = False
 
 
-#if event.key == "r": 
-# do red
-# elif == "y"
-#
-#
-
-
 #changeColor
 def Color(event):
     if event.key == "g":
         data["color"] = green
-    if event.key == "r":
+    elif event.key == "r":
         data["color"] = red
-    if event.key == "b":
+    elif event.key == "b":
         data["color"] = blue
-    if event.key == "y":
+    elif event.key == "y":
         data["color"] = yellow
 
 
