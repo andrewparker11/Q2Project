@@ -21,19 +21,22 @@ def moveRight(event):
 def moveLeft(event):
     if painter.x > 0:
         painter.x -= CELL_SIZE
-        Sprite(startBox,(painter.x,painter.y))
+        if data["drawOnOff"] == True:
+            Sprite(startBox,(painter.x,painter.y))
     
 #moves painter up    
 def moveUp(event):
     if painter.y > 0:
         painter.y -= CELL_SIZE
-        Sprite(startBox,(painter.x,painter.y))
+        if data["drawOnOff"] == True:
+            Sprite(startBox,(painter.x,painter.y))
     
 #moves painter down
 def moveDown(event):
     if painter.y < (ROWS-1)*CELL_SIZE:
         painter.y += CELL_SIZE
-        Sprite(startBox,(painter.x,painter.y))
+        if data["drawOnOff"] == True:
+            Sprite(startBox,(painter.x,painter.y))
 
 
 #drawOff
