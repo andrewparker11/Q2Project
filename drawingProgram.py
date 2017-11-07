@@ -40,13 +40,19 @@ def moveDown(event):
                 Sprite(startBox,(painter.x,painter.y))
                 
 
-
 #drawOff
 def drawOnOff(event):
     if data["drawOnOff"] == False:
         data["drawOnOff"] = True
     else:
         data["drawOnOff"] = False
+
+
+#if event.key == "r": 
+# do red
+# elif == "y"
+#
+#
 
 
 #changeColor
@@ -90,9 +96,9 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','down arrow',moveDown)
     App().listenKeyEvent('keydown','d',drawOnOff)
     
-    App().listenKeyEvent('keydown','g',greenColor)
-    App().listenKeyEvent('keydown','r',redColor)
-    App().listenKeyEvent('keydown','b',blueColor)
-    App().listenKeyEvent('keydown','y',yellowColor)
+    App().listenKeyEvent('keydown','g',Color)
+    App().listenKeyEvent('keydown','r',Color)
+    App().listenKeyEvent('keydown','b',Color)
+    App().listenKeyEvent('keydown','y',Color)
     
     App().run()
