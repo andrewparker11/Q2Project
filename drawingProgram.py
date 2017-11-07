@@ -40,19 +40,19 @@ def drawOnOff(event):
         data["drawOnOff"] == True
     else:
         data["drawOnOff"] == False
-  
+
+"""  
 #changeColorGreen
 def greenColor(event):
-    if data
+    if data"""
 
 
 #runs the game
 if __name__ == '__main__':
     
     data = {}
-    data["drawOnOff"] == True
+    data["drawOnOff"] = True
     
-    data["greenColor"] =
     
     white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
