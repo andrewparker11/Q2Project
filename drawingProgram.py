@@ -13,7 +13,9 @@ CELL_SIZE = 20
 def moveRight(event):
     if painter.x < (COLS-1)*CELL_SIZE:
         painter.x += CELL_SIZE
-        Sprite(startBox,(painter.x,painter.y))
+        if data["drawOnOff"] == True:
+            Sprite(startBox,(painter.x,painter.y))
+        
     
 #moves painter left
 def moveLeft(event):
@@ -37,15 +39,15 @@ def moveDown(event):
 #drawOff
 def drawOnOff(event):
     if data["drawOnOff"] == False:
-        data["drawOnOff"] == True
+        data["drawOnOff"] = True
     else:
-        data["drawOnOff"] == False
+        data["drawOnOff"] = False
 
 """
 #changeColorGreen
 def greenColor(event):
     if data["greenColor"] == False:
-        data["greenColor"] == True:
+        data["greenColor"] = True:
     else:
         data["greenColor"] == True
 """
