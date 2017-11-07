@@ -37,6 +37,10 @@ def moveDown(event):
         painter.y += CELL_SIZE
         if data["drawOnOff"] == True:
             Sprite(startBox,(painter.x,painter.y))
+            if data["greenColor"] == False:
+                startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,green),green)
+                Sprite(startBox,(painter.x,painter.y))
+                
 
 
 #drawOff
@@ -46,14 +50,14 @@ def drawOnOff(event):
     else:
         data["drawOnOff"] = False
 
-"""
+
 #changeColorGreen
 def greenColor(event):
     if data["greenColor"] == False:
         data["greenColor"] = True:
     else:
-        data["greenColor"] == True
-"""
+        data["greenColor"] = True
+
 
 #runs the game
 if __name__ == '__main__':
@@ -61,6 +65,10 @@ if __name__ == '__main__':
     data = {}
     data["drawOnOff"] = True
     
+    data["greenColor"] = False
+    data["redColor"] = False
+    data["blueColor"] = False
+    data["yellowColor"] = False
     
     white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
@@ -78,24 +86,20 @@ if __name__ == '__main__':
     BackBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
     startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black)
 
-    
+
     Sprite(startBox,(300,100))
     painter = Sprite(startBox, (300,100))
  
-    """
-    data["greenColor"] = False
-    data["redColor"] = False
-    data["blueColor"] = False
-    data["yellowColor"] = False
-    App().listenKeyEvent('keydown','g',greenColor)
-    App().listenKeyEvent('keydown','r',redColor)
-    App().listenKeyEvent('keydown','b',blueColor)
-    App().listenKeyEvent('keydown','y',yellowColor)
-    """
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
     App().listenKeyEvent('keydown','left arrow',moveLeft)
     App().listenKeyEvent('keydown','up arrow',moveUp)
     App().listenKeyEvent('keydown','down arrow',moveDown)
     App().listenKeyEvent('keydown','d',drawOnOff)
+    
+    App().listenKeyEvent('keydown','g',greenColor)
+    App().listenKeyEvent('keydown','r',redColor)
+    App().listenKeyEvent('keydown','b',blueColor)
+    App().listenKeyEvent('keydown','y',yellowColor)
+    
     App().run()
