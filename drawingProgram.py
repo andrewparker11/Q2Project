@@ -79,7 +79,11 @@ if __name__ == '__main__':
     data["redColor"] = False
     data["blueColor"] = False
     data["yellowColor"] = False
-    App().listenKeyEvent('keydown','g',greenColor)  """
+    App().listenKeyEvent('keydown','g',greenColor)
+    App().listenKeyEvent('keydown','r',redColor)
+    App().listenKeyEvent('keydown','b',blueColor)
+    App().listenKeyEvent('keydown','y',yellowColor)
+    """
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
     App().listenKeyEvent('keydown','left arrow',moveLeft)
