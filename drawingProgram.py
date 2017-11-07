@@ -36,7 +36,8 @@ def moveDown(event):
     if painter.y < (ROWS-1)*CELL_SIZE:
         painter.y += CELL_SIZE
         if data["drawOnOff"] == True:
-            startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
+            if event.key == "g":
+                startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
                 Sprite(startBox,(painter.x,painter.y))
                 
 
@@ -57,8 +58,14 @@ def drawOnOff(event):
 
 #changeColor
 def Color(event):
-    if data["color"] == black:
+    if event.key == "g":
         data["color"] = green
+    if event.key == "r":
+        data["color"] = red
+    if event.key == "b":
+        data["color"] = blue
+    if event.key == "y":
+        data["color"] = yellow
 
 
 #runs the game
