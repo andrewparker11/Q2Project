@@ -69,7 +69,8 @@ def Color(event):
 
 #runs the game
 if __name__ == '__main__':
-    
+  
+    white = Color(0xFFFFFF,1)
     black = Color(0x000000,1)
     green = Color(0x00FF00,1) 
     red = Color(0xFF0000,1) 
@@ -88,7 +89,7 @@ if __name__ == '__main__':
 
     
     BackBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
-    startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,black),black)
+    startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
 
 
     Sprite(startBox,(300,100))
