@@ -61,10 +61,19 @@ def changeColor(event):
         data["color"] = green
     elif event.key == "r":
         data["color"] = red
-    elif event.key == "b":
-        data["color"] = blue
     elif event.key == "y":
         data["color"] = yellow
+    elif event.key == "b":
+        data["color"] = blue
+    elif event.key == "o":
+        data["color"] = orange
+    elif event.key == "l":
+        data["color"] = lightBlue
+    elif event.key == "p":
+        data["color"] = purple
+    elif event.key == "u":
+        data["color"] = brown
+    
     
 
 
