@@ -4,9 +4,9 @@
 
 from ggame import *
 
-ROWS = 24
-COLS = 50
-CELL_SIZE = 20
+ROWS = 24 #original 24
+COLS = 50 #original 50
+CELL_SIZE = 20 #original 20
 
 
 #moves painter right
