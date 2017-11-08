@@ -36,6 +36,7 @@ def moveDown(event):
     if painter.y < (ROWS-1)*CELL_SIZE:
         painter.y += CELL_SIZE
         if data["drawOnOff"] == True:
+            startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
             Sprite(startBox,(painter.x,painter.y))
                 
 
