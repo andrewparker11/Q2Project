@@ -36,8 +36,7 @@ def moveDown(event):
     if painter.y < (ROWS-1)*CELL_SIZE:
         painter.y += CELL_SIZE
         if data["drawOnOff"] == True:
-            if event.key == "g":
-                Sprite(startBox,(painter.x,painter.y))
+            Sprite(startBox,(painter.x,painter.y))
                 
 
 #drawOff
@@ -49,7 +48,7 @@ def drawOnOff(event):
 
 
 #changeColor
-def Color(event):
+def changeColor(event):
     if event.key == "g":
         data["color"] = green
     elif event.key == "r":
@@ -95,9 +94,9 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','down arrow',moveDown)
     App().listenKeyEvent('keydown','d',drawOnOff)
     
-    App().listenKeyEvent('keydown','g',Color)
-    App().listenKeyEvent('keydown','r',Color)
-    App().listenKeyEvent('keydown','b',Color)
-    App().listenKeyEvent('keydown','y',Color)
+    App().listenKeyEvent('keydown','g',changeColor)
+    App().listenKeyEvent('keydown','r',changeColor)
+    App().listenKeyEvent('keydown','b',changeColor)
+    App().listenKeyEvent('keydown','y',changeColor)
     
     App().run()
