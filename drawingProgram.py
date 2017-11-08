@@ -53,7 +53,9 @@ def drawOnOff(event):
 
 #changeColor
 def changeColor(event):
-    if event.key == "g":
+    if event.key == "w":
+        data["color"] = white
+    elif event.key == "g":
         data["color"] = green
     elif event.key == "r":
         data["color"] = red
@@ -61,6 +63,7 @@ def changeColor(event):
         data["color"] = blue
     elif event.key == "y":
         data["color"] = yellow
+    
 
 
 #runs the game
