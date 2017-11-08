@@ -14,6 +14,7 @@ def moveRight(event):
     if painter.x < (COLS-1)*CELL_SIZE:
         painter.x += CELL_SIZE
         if data["drawOnOff"] == True:
+            startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
             Sprite(startBox,(painter.x,painter.y))
         
     
@@ -22,6 +23,7 @@ def moveLeft(event):
     if painter.x > 0:
         painter.x -= CELL_SIZE
         if data["drawOnOff"] == True:
+            startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
             Sprite(startBox,(painter.x,painter.y))
     
 #moves painter up    
@@ -29,6 +31,7 @@ def moveUp(event):
     if painter.y > 0:
         painter.y -= CELL_SIZE
         if data["drawOnOff"] == True:
+            startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
             Sprite(startBox,(painter.x,painter.y))
     
 #moves painter down
