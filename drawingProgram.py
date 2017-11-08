@@ -55,7 +55,7 @@ def drawOnOff(event):
 def changeColor(event):
     if event.key == "w":
         data["color"] = white
-    elif event.key == "b":
+    elif event.key == "n":
         data["color"] = black
     elif event.key == "g":
         data["color"] = green
