@@ -112,9 +112,17 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','down arrow',moveDown)
     App().listenKeyEvent('keydown','d',drawOnOff)
     
+    App().listenKeyEvent('keydown','w',changeColor)
+    App().listenKeyEvent('keydown','n',changeColor)
     App().listenKeyEvent('keydown','g',changeColor)
     App().listenKeyEvent('keydown','r',changeColor)
     App().listenKeyEvent('keydown','b',changeColor)
     App().listenKeyEvent('keydown','y',changeColor)
+    
+    App().listenKeyEvent('keydown','o',changeColor)
+    App().listenKeyEvent('keydown','l',changeColor)
+    App().listenKeyEvent('keydown','p',changeColor)
+    App().listenKeyEvent('keydown','u',changeColor)
+    
     
     App().run()
