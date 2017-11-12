@@ -43,7 +43,7 @@ def moveDown(event):
             Sprite(startBox,(painter.x,painter.y))
                 
 
-#drawOff
+#turns draw function On and Off
 def drawOnOff(event):
     if data["drawOnOff"] == False:
         data["drawOnOff"] = True
@@ -51,7 +51,7 @@ def drawOnOff(event):
         data["drawOnOff"] = False
 
 
-#changeColor
+#changes Color
 def changeColor(event):
     if event.key == "w":
         data["color"] = white
@@ -80,7 +80,7 @@ def changeColor(event):
 #runs the game
 if __name__ == '__main__':
   
-    white = Color(0xFFFFFF,1)
+    white = Color(0xFFFFFF,1) #can act as an eraser
     black = Color(0x000000,1)
     green = Color(0x00FF00,1) 
     red = Color(0xFF0000,1) 
@@ -93,19 +93,19 @@ if __name__ == '__main__':
     darkPink = Color(0xFF007F,1)
     brown = Color(0x8B4513,1)
     
-    data = {}
-    data["drawOnOff"] = True
-    data["color"] = black 
+    data = {} #dictionary 
+    data["drawOnOff"] = True   #draw key
+    data["color"] = black     #color key
 
-    
+    #Backdrop and startpoint boxes
     BackBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
     startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
 
-
+    #Sprites the startbox
     Sprite(startBox,(300,100))
     painter = Sprite(startBox, (300,100))
  
-    
+    #listens to keys to run actions/functions
     App().listenKeyEvent('keydown','right arrow',moveRight)
     App().listenKeyEvent('keydown','left arrow',moveLeft)
     App().listenKeyEvent('keydown','up arrow',moveUp)
@@ -123,6 +123,5 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','l',changeColor)
     App().listenKeyEvent('keydown','p',changeColor)
     App().listenKeyEvent('keydown','u',changeColor)
-    
     
     App().run()
