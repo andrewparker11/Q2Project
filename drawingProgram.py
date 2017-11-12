@@ -97,7 +97,7 @@ if __name__ == '__main__':
     data["drawOnOff"] = True   #draw key
     data["color"] = black     #color key
 
-    #Backdrop and startpoint boxes
+    #Backdrop(can be removed unless you want other color than white) and startpoint boxes
     BackBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,white),white)
     startBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,data["color"]),data["color"])
 
