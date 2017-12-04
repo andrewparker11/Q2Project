@@ -14,8 +14,8 @@ print(sum(squares))
 .sort()
 list[]
 
-for fruit in fruits:
-    print(fruit)
+for item in myList:
+    print(item)
     
 .append(' ')
 .remove(' ') 
@@ -25,6 +25,9 @@ len()
 
 sum(numbers), min(numbers), max(numbers)
 
+'penny' in coins
+True
 
-
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+matrix[1][2] = 6
 
